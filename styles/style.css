@@ -143,7 +143,7 @@ h2 {
 }
 
 .slider:before {
-    background-color: #fff;
+    background-color: var(--title-color);
     content: "";
     height: 32px;
     position: absolute;
@@ -152,11 +152,11 @@ h2 {
 }
 
 input:checked + .slider {
-    background-color: #66bb6a;
+    background-color: var(--background);
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(30px);
 }
 
 .slider.round {
