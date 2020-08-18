@@ -108,7 +108,7 @@ h2 {
 
 .topbar {
     padding: 8px 0;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 }
 
 .ending {
@@ -141,7 +141,7 @@ h2 {
 }
 
 .slider {
-    background-color: var(--background);
+    background-color: transparent;
     border: 1px solid var(--title-color);
     bottom: 0;
     cursor: pointer;
@@ -150,20 +150,28 @@ h2 {
     right: 0;
     top: 0;
     transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px;
 }
 
 .slider:before {
     content: "Dark";
     transition: .4s;
     color: var(--title-color);
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px;
 }
 
 input:checked + .slider {
-    background-color: var(--title-color);
+    background-color: transparent;
 }
 
 input:checked + .slider:before {
-    transform: translateX(30px);
     content: "Light";
 }
 
