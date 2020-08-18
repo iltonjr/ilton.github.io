@@ -107,6 +107,13 @@ h2 {
     padding: 0;
 }
 
+.topbar {
+    background: var(--title-color);
+    color: var(--paragraph-color);
+    padding: 8px 0;
+}
+
+
 /* --------------------------------------- */
 
 .theme-switch-wrapper {
@@ -120,6 +127,7 @@ h2 {
 }
 
 .theme-switch {
+    margin-bottom: 0;
     display: inline-block;
     height: 34px;
     position: relative;
@@ -131,8 +139,8 @@ h2 {
 }
 
 .slider {
-    background-color: var(--background);
-    border: 1px solid var(--title-color);
+    background-color: var(--title-color);
+    border: 1px solid var(--background);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -143,7 +151,7 @@ h2 {
 }
 
 .slider:before {
-    background-color: var(--title-color);
+    background-color: var(--background);
     content: "";
     height: 32px;
     position: absolute;
@@ -152,7 +160,7 @@ h2 {
 }
 
 input:checked + .slider {
-    background-color: var(--background);
+    background-color: var(--title-color);
 }
 
 input:checked + .slider:before {
