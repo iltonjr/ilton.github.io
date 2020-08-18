@@ -1,11 +1,16 @@
 
 :root {
-    --white: #fff;
+    --background: #fff;
     --links:#3183FF;
-    --light-title: #333;
-    --light-paragraph: #666;
-    --dark-title: #fff;
-    --dark-paragraph: #fff;
+    --title-color: #333;
+    --paragraph-color: #666;
+}
+
+[data-theme="dark"] {
+    --background: #333;
+    --links:#3183FF;
+    --title-color: #fff;
+    --paragraph-color: #fff;
 }
   
 a {
@@ -14,10 +19,11 @@ a {
 }
 
 p {
-    color: var(--light-paragraph);
+    color: var(--paragraph-color);
 }
 
 body {
+    background: var(--background);
     margin: 64px 0;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -28,7 +34,7 @@ section {
 }
 
 h1 {
-    color: var(--light-title);
+    color: var(--title-color);
     font-weight: normal;
     font-size: 64px;
     line-height: 77px;
@@ -56,7 +62,7 @@ header p {
 }
 
 h2 {
-    color: var(--light-title);
+    color: var(--title-color);
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -64,7 +70,7 @@ h2 {
 }
 
 .list-item {
-    border-bottom: 1px dashed var(--light-paragraph);
+    border-bottom: 1px dashed var(--paragraph-color);
     margin-bottom: 16px;
 }
 
@@ -73,7 +79,7 @@ h2 {
 }
 
 .list-item p {
-    color: var(--light-paragraph);
+    color: var(--paragraph-color);
     font-style: italic;
     font-weight: normal;
     font-size: 16px;
@@ -87,14 +93,14 @@ h2 {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    color: var(--light-title);
-    border: 1px solid var(--light-title);
+    color: var(--title-color);
+    border: 1px solid var(--title-color);
     border-radius: 4px;
     padding: 8px;
 }
 
 .list-item ul {
-    color: var(--light-paragraph);
+    color: var(--paragraph-color);
     font-size: 16px;
     line-height: 24px;
     list-style: none;
