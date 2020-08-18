@@ -24,7 +24,6 @@ p {
 
 body {
     background: var(--background);
-    margin: 64px 0;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
 }
@@ -111,6 +110,11 @@ h2 {
     background: var(--title-color);
     color: var(--paragraph-color);
     padding: 8px 0;
+    margin-bottom: 64px;
+}
+
+.ending {
+    margin-bottom: 64px;
 }
 
 
