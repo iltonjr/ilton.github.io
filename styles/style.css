@@ -107,8 +107,6 @@ h2 {
 }
 
 .topbar {
-    background: var(--title-color);
-    color: var(--paragraph-color);
     padding: 8px 0;
     margin-bottom: 64px;
 }
@@ -143,8 +141,8 @@ h2 {
 }
 
 .slider {
-    background-color: var(--title-color);
-    border: 1px solid var(--background);
+    background-color: var(--background);
+    border: 1px solid var(--title-color);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -155,12 +153,9 @@ h2 {
 }
 
 .slider:before {
-    background-color: var(--background);
-    content: "";
-    height: 32px;
-    position: absolute;
+    content: "Dark";
     transition: .4s;
-    width: 32px;
+    color: var(--title-color);
 }
 
 input:checked + .slider {
@@ -169,6 +164,7 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(30px);
+    content: "Light";
 }
 
 .slider.round {
