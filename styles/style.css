@@ -2,6 +2,7 @@
 :root {
     --background: #fff;
     --links:#1970F2;
+    --links-bg: #D5E4F9;
     --title-color: #333;
     --paragraph-color: #666;
     --border-color: #666;
@@ -12,6 +13,7 @@
 [data-theme="dark"] {
     --background: #333;
     --links:#66A0F9;
+    --links-bg: #C8DBF8;
     --title-color: #fff;
     --border-color: #fff;
     --paragraph-color: #fff;
@@ -21,12 +23,14 @@
   
 a {
     color: var(--links);
+    padding: 2px 4px;
+    border-radius: 4px;
     text-decoration: underline;
     transition: 0.2s ease-in;
 }
 
 a:hover {
-    color: var(--paragraph-color);
+    background: var(--links-bg);
 }
 
 p {
@@ -171,6 +175,12 @@ h2 {
     background: var(--alert-bg);
 }
 
+.new_text {
+    border-left: 2px solid var(--alert-bg);
+    padding-left: 8px;
+    margin-left: -8px;
+}
+
 
 /* --------------------------------------- */
 
@@ -225,6 +235,7 @@ h2 {
 
 .header-link:hover {
     text-decoration: none;
+    background: var(--background);
     color: var(--title-color);
 }
 

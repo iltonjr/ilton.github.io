@@ -82,7 +82,7 @@
                 <section id="who">
                     <h2>Who?</h2>
 
-                    <p>Meu nome é <b>Ilton Alberto Junior</b>. Tenho 27 anos e resido atualmente em São Paulo / Brazil e atuo como designer desde <b>2012</b>.</p>
+                    <p>Meu nome é <b>Ilton Alberto Junior</b>. Tenho <span id="my_age"></span> anos e resido atualmente em São Paulo / Brazil e atuo como designer desde <b>2012</b>.</p>
     
                     <p>Já passei por diversas agências de publicidade, atuando em diversas áreas como Diretor de Arte, Social Media, Arte Finalista e desenvolvedor Front-End. Conforme fui estudando, conheci mais sobre <b>experiência do usuário</b>, interações e a como construir interfaces que se adequam melhor ao uso para todos e fui cada vez mais estudando sobre.</p>
     
@@ -200,6 +200,9 @@
     </div>
     
     <script>
+
+        /* Mudando o Modo para Dark ou Light */
+
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
         const currentTheme = localStorage.getItem('theme');
 
@@ -222,6 +225,17 @@
         }
 
         toggleSwitch.addEventListener('change', switchTheme, false);
+
+        /* Exibindo minha idade dinamicamente */
+
+        function calculate_age(dob) { 
+            var diff_ms = Date.now() - dob.getTime();
+            var age_dt = new Date(diff_ms); 
+        
+            return Math.abs(age_dt.getUTCFullYear() - 1970);
+        }
+
+        document.getElementById("my_age").innerHTML = calculate_age(new Date(1993, 9, 5));
     </script>
 
 </body>
